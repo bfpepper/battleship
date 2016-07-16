@@ -23,6 +23,10 @@ class Message
     "Thanks for playing. We hope you enjoyed the game."
   end
 
+  def invalid
+    "Invalid selection. Please try again."
+  end
+
 
 
 end
