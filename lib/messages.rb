@@ -19,6 +19,10 @@ class Message
     Good luck and have fun!\n\n"
   end
 
+  def quit
+    "Thanks for playing. We hope you enjoyed the game."
+  end
+
 
 
 end
