@@ -1,8 +1,7 @@
 class Message
 
   def welcome
-    "Welcome to BATTLESHIP\n\n
-    Would you like to (p)lay, read the (i)nstructions, or (q)uit?"
+    "Welcome to BATTLESHIP\n\nWould you like to (p)lay, read the (i)nstructions, or (q)uit?"
   end
 
   def instructions
@@ -20,6 +19,6 @@ class Message
     Good luck and have fun!\n\n"
   end
 
-  
+
 
 end

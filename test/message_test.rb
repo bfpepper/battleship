@@ -4,8 +4,7 @@ require "./lib/messages"
 class MessagesTest < Minitest::Test
 
   def test_welcome_message
-    result = "Welcome to BATTLESHIP\n\n
-    Would you like to (p)lay, read the (i)nstructions, or (q)uit?"
+    result = "Welcome to BATTLESHIP\n\nWould you like to (p)lay, read the (i)nstructions, or (q)uit?"
     request = Message.new.welcome
     assert_equal result, request
   end
