@@ -21,12 +21,12 @@ class GameBoard
 
   def full_board
     [header_footer,
-    columns,
-    rows("A"),
-    rows("B"),
-    rows("C"),
-    rows("D"),
-    header_footer]
+      columns,
+      rows("A"),
+      rows("B"),
+      rows("C"),
+      rows("D"),
+      header_footer]
   end
 
 end

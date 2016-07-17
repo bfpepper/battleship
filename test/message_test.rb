@@ -26,5 +26,17 @@ class MessagesTest < Minitest::Test
     assert_equal result, request
   end
 
+  def test_it_has_a_quit_message
+    result = "Thanks for playing. We hope you enjoyed the game."
+    request = Message.new.quit
+    assert_equal result, request
+  end
+
+  def test_it_has_an_invalid_message
+    result =     "Invalid selection. Please try again."
+    request = Message.new.invalid
+    assert_equal result, request
+  end
+
 
 end
