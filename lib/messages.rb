@@ -1,7 +1,11 @@
 class Message
 
   def welcome
-    "Welcome to BATTLESHIP\n\nWould you like to (p)lay, read the (i)nstructions, or (q)uit?"
+    "Welcome to BATTLESHIP\n\n"
+  end
+
+  def main_menu
+    "Would you like to (p)lay, read the (i)nstructions, or (q)uit?"
   end
 
   def instructions
