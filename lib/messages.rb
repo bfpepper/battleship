@@ -1,7 +1,7 @@
 class Message
 
   def welcome
-    "Welcome to BATTLESHIP\n\n"
+    "Welcome to BATTLESHIP.\n\n"
   end
 
   def main_menu
@@ -23,6 +23,10 @@ class Message
     Good luck and have fun!\n\n"
   end
 
+  def start_message
+    "Would you like to (p)lay, read the (i)nstructions, or (q)uit?"
+  end
+
   def quit
     "Thanks for playing. We hope you enjoyed the game."
   end
@@ -31,6 +35,14 @@ class Message
     "Invalid selection. Please try again."
   end
 
+  def computer_placed_ships
+    "I have laid out my ships on the grid.
+    You now need to layout your two ships.
+    The first is two units long and the
+    second is three units long.
+    The grid has A1 at the top left and D4 at the bottom right.
 
+    Enter the squares for the two-unit ship:"
+  end
 
 end
