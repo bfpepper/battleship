@@ -4,7 +4,7 @@ require "./lib/messages"
 class MessagesTest < Minitest::Test
 
   def test_welcome_message
-    result = "Welcome to BATTLESHIP\n\nWould you like to (p)lay, read the (i)nstructions, or (q)uit?"
+    result = "Welcome to BATTLESHIP.\n\n"
     request = Message.new.welcome
     assert_equal result, request
   end
@@ -33,8 +33,26 @@ class MessagesTest < Minitest::Test
   end
 
   def test_it_has_an_invalid_message
-    result =     "Invalid selection. Please try again."
+    result = "Invalid selection. Please try again."
     request = Message.new.invalid
+    assert_equal result, request
+  end
+
+  def test_the_computer_has_placed_ships
+    result = "I have laid out my ships on the grid.
+    You now need to layout your two ships.
+    The first is two units long and the
+    second is three units long.
+    The grid has A1 at the top left and D4 at the bottom right.
+
+    Enter the squares for the two-unit ship:"
+    request = Message.new.computer_placed_ships
+    assert_equal result, request
+  end
+
+  def test_there_is_a_strat_menu_message
+    result = "Would you like to (p)lay, read the (i)nstructions, or (q)uit?"
+    request = Message.new.start_message
     assert_equal result, request
   end
 

@@ -29,4 +29,13 @@ class GameBoard
       header_footer]
   end
 
+  def show_board
+    full_board.each do |row|
+      row.each do |thing|
+        print thing + " "
+      end
+      puts "\n"
+    end
+  end
+
 end
