@@ -1,10 +1,11 @@
 require "./lib/messages"
 require "./lib/player_controls"
+require "./lib/computer_player"
 
 class Game
 
   def initialize
-    @ai_player = ComputerPlayer.new.populate_ships#make part of the computer class
+    @ai_player = ComputerPlayer.new#make part of the computer class
     #@human_player =
   end
 
