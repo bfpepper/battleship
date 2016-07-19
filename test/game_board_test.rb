@@ -28,21 +28,23 @@ class GameBoardTest < Minitest::Test
   end
 
   def test_there_is_a_board
-    skip
     board = GameBoard.new
-    output = [["==========="],
-    [".", "1", "2", "3", "4"],
-    ["A", " ", " ", " ", " "],
+    output = [["A", " ", " ", " ", " "],
     ["B", " ", " ", " ", " "],
     ["C", " ", " ", " ", " "],
-    ["D", " ", " ", " ", " "],
-    ["==========="]]
+    ["D", " ", " ", " ", " "]]
     assert_equal output, board.full_board
   end
 
   def test_number_of_valid_moves
     board = GameBoard.new
     assert_equal 16, board.valid_moves.count
+  end
+
+  def test_can_print_a_board
+    results = nil
+    request = GameBoard.new.show_board
+    assert_equal results, request
   end
 
 end

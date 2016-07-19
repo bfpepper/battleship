@@ -37,7 +37,14 @@ class ComputerPlayerTest < Minitest::Test
   def test_only_a_spot_is_hit_once
     player = ComputerPlayer.new
     16.times{ player.fire }
-    assert_equal [], player.human_board.valid_moves
+    assert_equal 0, player.human_board.valid_moves.count
+  end
+
+  def test_board_registeres_a_hit_when_the_space_is_ocupied
+    player = ComputerPlayer.new
+    first_hit = player.fire
+    first_hit
+    assert "H", player.human_board.internal_board
   end
 
 
