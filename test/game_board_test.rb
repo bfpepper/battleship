@@ -9,12 +9,12 @@ class GameBoardTest < Minitest::Test
 
   def test_it_has_headers_and_footers
     board = GameBoard.new
-    assert_equal ["==========="], board.header_footer
+    assert_equal "===========", board.header_footer
   end
 
   def test_it_has_numeric_columns
     board = GameBoard.new
-    assert_equal [".", "1", "2", "3", "4"], board.columns
+    assert_equal ". 1 2 3 4", board.columns
   end
 
   def test_it_has_a_row
@@ -28,7 +28,7 @@ class GameBoardTest < Minitest::Test
   end
 
   def test_there_is_a_board
-    skipg
+    skip
     board = GameBoard.new
     output = [["==========="],
     [".", "1", "2", "3", "4"],
@@ -42,21 +42,7 @@ class GameBoardTest < Minitest::Test
 
   def test_number_of_valid_moves
     board = GameBoard.new
-    assert_equal 16, board.vailid_moves.count
+    assert_equal 16, board.valid_moves.count
   end
-
-  def test_this_is_the_board
-    result = [["==========="],
-    [".", "1", "2", "3", "4"],
-    ["A", " ", " ", " ", " "],
-    ["B", " ", " ", " ", " "],
-    ["C", " ", " ", " ", " "],
-    ["D", " ", " ", " ", " "],
-    ["==========="]]
-    request = GameBoard.new.show_board
-    assert_equal result, request
-  end
-
-
 
 end
