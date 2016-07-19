@@ -52,7 +52,7 @@ class MessagesTest < Minitest::Test
 
   def test_there_is_a_strat_menu_message
     result = "Would you like to (p)lay, read the (i)nstructions, or (q)uit?"
-    request = Message.new.start_message
+    request = Message.new.main_menu
     assert_equal result, request
   end
 

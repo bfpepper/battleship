@@ -12,7 +12,7 @@ class PlayerControls
       sleep(2)
       main_menu
     elsif user_answer == "P" || user_answer == "PLAY"
-      puts Message.new.ship_placment
+      puts Message.new.computer_placed_ships
       sleep(2)
       #do some other stuff here
     else
