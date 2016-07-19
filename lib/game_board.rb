@@ -1,6 +1,6 @@
 class GameBoard
 
-  attr_reader :vailid_moves
+  attr_reader :valid_moves
   attr_accessor :internal_board
 
   def initialize
@@ -29,15 +29,15 @@ class GameBoard
       rows("D")]
   end
 
-  def show_board
-  header_footer + "\n" +columns
-    full_board.each do |row|
-      row.each do |thing|
-        print thing + " "
-      end
-      puts "\n"
-    end
-  header_footer
-  end
+  # def show_board
+  # header_footer + "\n" +columns
+  #   full_board.each do |row|
+  #     row.each do |thing|
+  #       print thing + " "
+  #     end
+  #     puts "\n"
+  #   end
+  # header_footer
+  # end
 
 end
