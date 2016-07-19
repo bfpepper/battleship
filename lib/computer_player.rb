@@ -1,4 +1,5 @@
 require "./lib/game_board"
+require "./lib/ship_placement"
 
 class ComputerPlayer
 
@@ -26,6 +27,17 @@ class ComputerPlayer
 
   def get_fire_posiiton
     human_board.valid_moves.shuffle!.pop
+  end
+
+  def place_ship(ship_size)
+    all_cordinates = random_placement(ship_size).split(" ")
+    
+    binding.pry
+  end
+
+  def random_placement(ship_size)
+    return ShipPlacement.new.ship_size_2_array.shuffle.pop if ship_size == 2
+    return ShipPlacement.new.ship_size_3_array.shuffle.pop if ship_size == 3
   end
 
 end
