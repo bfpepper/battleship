@@ -4,6 +4,8 @@ require "./lib/computer_player"
 
 class Game
 
+  attr_accessor :ai_player
+
   def initialize
     @ai_player = ComputerPlayer.new#make part of the computer class
     #@human_player =
@@ -11,8 +13,8 @@ class Game
 
   def start_game
     puts Message.new.welcome
-    #place 2 space ship
-    #place 3 space ship
+    ai_player.place_ship(2)
+    ai_player.place_ship(3)
     PlayerControls.new.main_menu
   end
 

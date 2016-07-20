@@ -60,6 +60,8 @@ class ComputerPlayerTest < Minitest::Test
     board = ComputerPlayer.new.computer_board.full_board
     player.place_ship(2)
     refute_equal board, player.computer_board.internal_board
+    player.place_ship(3)
+    refute_equal board, player.computer_board.internal_board
   end
 
 end
