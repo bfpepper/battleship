@@ -33,8 +33,9 @@ class ComputerPlayer
     all_cordinates = get_positions(ship_size)
     split_cordinates = split_given_cordinates(all_cordinates)
     numbered_cordinates = convert_string_cordinate(split_cordinates)
-    computer_board.internal_board[numbered_cordinates[0]][numbered_cordinates[1]] = "O"
-    # binding.pry
+    numbered_cordinates.each do |cordinate|
+      computer_board.internal_board[cordinate[0]][cordinate[1]] = "O"
+    end
   end
 
   def random_placement(ship_size)
