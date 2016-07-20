@@ -18,7 +18,13 @@ class ComputerPlayer
     position = get_fire_posiiton
     row = row_hash[position[0]]
     column = position[1]
-    human_board.internal_board[row][column.to_i] = "H" #need to compare to ship placement and make dynamic.
+    human_board.internal_board[row][column.to_i] = "H"
+  end
+
+  def occupied?(shot_on_board)
+    #take in shot convert_string_cordinate
+    #compare to board
+    #register "h" or "m"
   end
 
   def row_hash
@@ -34,7 +40,7 @@ class ComputerPlayer
     split_cordinates = split_given_cordinates(all_cordinates)
     numbered_cordinates = convert_string_cordinate(split_cordinates)
     numbered_cordinates.each do |cordinate|
-      computer_board.internal_board[cordinate[0]][cordinate[1]] = "O"
+        computer_board.internal_board[cordinate[0]][cordinate[1]] = "O"
     end
   end
 

@@ -23,10 +23,6 @@ class Message
     Good luck and have fun!\n\n"
   end
 
-  def start_message
-    "Would you like to (p)lay, read the (i)nstructions, or (q)uit?"
-  end
-
   def quit
     "Thanks for playing. We hope you enjoyed the game."
   end

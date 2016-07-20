@@ -55,6 +55,5 @@ class MessagesTest < Minitest::Test
     request = Message.new.main_menu
     assert_equal result, request
   end
-
-
+  
 end

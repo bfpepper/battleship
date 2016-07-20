@@ -1,3 +1,4 @@
+require "pry"
 require "./lib/messages"
 require "./lib/player_controls"
 require "./lib/computer_player"
@@ -15,11 +16,11 @@ class Game
     puts Message.new.welcome
     ai_player.place_ship(2)
     ai_player.place_ship(3)
+    binding.pry
     PlayerControls.new.main_menu
   end
 
   #has player borad
-  #has computer board
 
 
 end
